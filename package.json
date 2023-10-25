@@ -1,0 +1,19 @@
+{
+  "name": "school-management",
+  "productName": "TLB-School-Management",
+  "version": "1.0.0",
+  "description": "",
+  "main": "main.js",
+  "scripts": {
+    "start": "electron ."
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "electron": "^20.2.0"
+  },
+  "dependencies": {
+    "toastify-js": "^1.12.0"
+  }
+}

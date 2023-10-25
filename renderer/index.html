@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta http-equiv="Content-Security-Policy" content="script-src 'self'" />
+    <link
+    href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;700&display=swap"
+    rel="stylesheet"
+  />
+  <link rel="stylesheet" href="css/style.css" />
+  <script src="js/renderer.js" defer></script>
+    <title>Student Management System</title>
+  </head>
+  <body class="bg-teal-700">
+    <div
+      class="max-w-xl m-auto h-screen flex flex-col align-center justify-center"
+    >
+      <div class="flex flex-col w-full items-center justify-center bg-grey-lighter">
+        <label
+          class="w-80 flex flex-col items-center px-4 py-7 bg-white text-gray-500 rounded-lg shadow-lg uppercase border border-blue hover:text-teal-800"
+        >
+          <h1 class="w-[32px]">The Layout Guys</h1>
+          <span class="leading-normal">Upload Student data</span>
+          <div class="flex items-center justify-between mt-2">
+            <button id="addStudent" class="hover:text-teal-700 focus:outline-none br">Add Student</button>
+            <button id="allStudent" class="hover:text-teal-700 focus:outline-none mar br">All Students</button>
+          </div>
+
+        </label>
+      </div>
+
+      <div id="table" class="w- bg-white relative overflow-x-auto mt-4 rounded-lg shadow-lg uppercase border border-blue hover:text-teal-800">
+            <table class="bg-grey-lighter w-full text-left text-gray-500">
+                <thead class="uppercase">
+                    <tr>
+                        <th scope="col" class="px-6 py-3">
+                            Full Name
+                        </th>
+                        <th scope="col" class="px-6 py-3">
+                            Class
+                        </th>
+                        <th scope="col" class="px-6 py-3">
+                            Age
+                        </th>
+                        <th scope="col" class="px-6 py-3">
+                            Profile Pic
+                        </th>
+                    </tr>
+                </thead>
+                <tbody id="studentList" class="p-16">
+                    <tr class="bg-white border-b border-gray-700 font-medium text-gray-900 whitespace-nowrap">
+                      
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+
+      <!-- Form -->
+      <form id="form" class="hidden">
+        <!-- Full Name -->
+        <div class="mt-6">
+          <label class="mt-1 block text-white text-center w-80 m-auto py-3 shadow-sm border-gray-300 rounded-md">Full Name</label>
+          <input
+            type="Text"
+            name="fullName"
+            id="fullName"
+            class="mt-1 block w-80 m-auto p-3 shadow-sm border-gray-300 rounded-md"
+            placeholder="Full Name"
+          />
+        </div>
+
+        <!-- Class -->
+        <div class="mt-6">
+          <label class="mt-1 block text-white text-center w-80 m-auto py-3 shadow-sm border-gray-300 rounded-md">Class</label>
+          <input
+            type="Text"
+            name="class"
+            id="class"
+            class="mt-1 block w-80 m-auto p-3 shadow-sm border-gray-300 rounded-md"
+            placeholder="Class"
+          />
+        </div>
+
+        <!-- Age -->
+        <div class="mt-6">
+          <label class="mt-1 block text-white text-center w-80 m-auto py-3 shadow-sm border-gray-300 rounded-md">Age</label>
+          <input
+            type="number"
+            name="age"
+            id="age"
+            class="mt-1 block w-80 m-auto p-3 shadow-sm border-gray-300 rounded-md"
+            placeholder="Age"
+          />
+        </div>
+
+        <!-- Profile Picture -->
+        <div class="mt-4">
+          <label class="mt-1 block text-white text-center w-80 m-auto py-3 shadow-sm border-gray-300 rounded-md">Profile Picture</label>
+          <input id="img" type="file" class="mt-1 block w-80 m-auto p-3 shadow-sm border-gray-300 rounded-md" />
+        </div>
+        <!-- Button -->
+        <div class="mt-6">
+          <button
+            type="submit"
+            class="w-80 m-auto flex justify-center py-2 px-4 border border-transparent shadow-sm text-sm font-medium rounded-md text-white bg-teal-500 hover:bg-teal-900 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-blue-500"
+          >
+            Save User
+          </button>
+
+      </form>
+
+      <p class="text-white text-lg text-center font-mono mt-6"><strong>Recently added: </strong><span id="addedStudent"></span></p>
+      <p class="text-white text-lg text-center font-mono mt-2"><strong>Into the class: </strong><span id="addedClass"></span></p>
+    </div>
+  </body>
+</html>
